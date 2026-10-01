@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-const DB_NAME = 'MainframeVideoDB';
+const DB_NAME = 'MainframeVideoDB_v2';
 const DB_VERSION = 1;
 const STORE_NAME = 'videos';
 

@@ -34,7 +34,8 @@ import {
 } from 'lucide-react';
 import { saveCustomVideo, loadCustomVideo } from './lib/videoStorage';
 
-const DEFAULT_VIDEO_URL = '/notebook-360.mp4';
+const DEFAULT_VIDEO_URL =
+  'https://v16-pippit-video-cdn.pippit.ai/78c2fe406ea7cfe0c60a5e208d315274/6baacf12/video/tos/alisg/tos-alisg-v-3bfc40-sg/ooAAAfUlBAC1iAc7A9igsYEQXAqEvjHwwEikCY/?a=573081&bti=ZHZocnV3ZzF2cXZld3NsQGJvc1xsZmJwYmZyK2ZtbWA%3D&&bt=3385&ft=cpOXzGz7ThWH19ZaLGZmo0P&mime_type=video_mp4&rc=am5qc2o5cjNyZGYzODQ6NEBpam5qc2o5cjNyZGYzODQ6NEBlYl9rMmRjL3JhLS1kNDFzYSNlYl9rMmRjL3JhLS1kNDFzcw%3D%3D&vvpl=1&l=20261001053113666C494B3E8A3A516A9B&btag=e00070000';
 
 const COMPANY_VIDEO_URL =
   'https://v16-pippit-video-cdn.pippit.ai/0db12abacc7a2cae2c9d828d6ef521c3/6baaf449/video/tos/alisg/tos-alisg-v-3bfc40-sg/oMP9aOwXfYEX8MCAABi1hjAFpiAqi7ARytAEq9/?a=573081&bti=ZHZocnV3ZzF2cXZld3NsQGJvc1xsZmJwYmZyK2ZtbWA%3D&&bt=3308&ft=cpOXzGz7ThWHc8saLGZmo0P&mime_type=video_mp4&rc=amh3O3c5cmd0ZGYzODQ6NEBpamh3O3c5cmd0ZGYzODQ6NEAvLzZtMmRjYHJhLS1kNDFzYSMvLzZtMmRjYHJhLS1kNDFzcw%3D%3D&vvpl=1&l=202610010811090E5B5923A1486C8ED60D&btag=e00078000';
@@ -366,7 +367,8 @@ export default function App() {
           preload="auto"
           loop
           src={videoSrc}
-          className="w-auto h-full max-h-[105vh] min-w-[70vw] lg:min-w-[80vw] max-w-[98vw] object-contain sm:object-cover object-center pointer-events-none transform scale-[1.24] origin-center"
+          onError={() => setVideoSrc('/hero-bg.mp4')}
+          className="w-full h-full object-cover object-center pointer-events-none"
         />
 
         {/* Soft atmospheric gradient scrims for contrast */}
